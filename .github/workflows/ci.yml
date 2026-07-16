@@ -3,6 +3,7 @@ name: CI Pipeline
 
 # ── TRIGGERS: cuándo se ejecuta este workflow ──────────────────
 on:
+  workflow_dispatch:
   push:
     branches:
       - main # se activa en cada push a la rama main
@@ -42,3 +43,9 @@ jobs:
       # PASO 5: Mensaje de éxito
       - name: ✅ Pipeline completado
         run: echo "🎉 CI Pipeline ejecutado exitosamente"
+  lint:
+    name: lint
+    runs-on: ubuntu-latest
+    steps:
+      name: probar lint
+      run: awk 'length > 80' test.sh
