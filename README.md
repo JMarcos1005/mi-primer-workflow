@@ -1,2 +1,5 @@
+![CI Pipeline](https://github.com/JMarcos1005/mi-primer-workflow/actions/workflows/ci.yml/badge.svg)
+
+
 # mi-primer-workflow
  Mi primer pipeline CI/CD con GitHub Actions
